@@ -40,7 +40,7 @@ PRODUCT_COPY_FILES += \
 
 # WLAN driver configuration files
 PRODUCT_COPY_FILES += \
-    device/oneplus/oneplus2/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/qca_cld/WCNSS_cfg.dat \
+    device/oneplus/oneplus2/wifi/WCNSS_cfg.dat:system/etc/wifi/WCNSS_cfg.dat \
     device/oneplus/oneplus2/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     device/oneplus/oneplus2/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
     device/oneplus/oneplus2/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
@@ -75,7 +75,8 @@ PRODUCT_PACKAGES += \
     camera.msm8994 \
     libshim_camera \
     libshim_ims-camera \
-    sensors.hal.tof
+    sensors.hal.tof \
+    sensors.ssc.wrapper
 
 # Keylayout
 PRODUCT_COPY_FILES += \
