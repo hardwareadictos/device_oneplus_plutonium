@@ -124,6 +124,9 @@ PRODUCT_PACKAGES += \
     libjson \
     libprotobuf-cpp-full
 
+# QPerformance
+PRODUCT_BOOT_JARS += QPerformance
+
 #ANT+ stack
 PRODUCT_PACKAGES += \
     AntHalService \
