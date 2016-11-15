@@ -115,4 +115,7 @@
     <!-- Whether device has physical tri state switch -->
     <bool name="config_hasAlertSlider">true</bool>
 
+    <!-- Whether notify fingerprint client of successful cancelled authentication -->
+    <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
+
 </resources>
