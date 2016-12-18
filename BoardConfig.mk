@@ -70,6 +70,9 @@ TARGET_KERNEL_CONFIG := oneplus2_defconfig
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
 
+# THP
+TARGET_SUPPORTS_THP := true
+
 BOARD_USES_GENERIC_AUDIO := true
 
 # Releasetools extension for shipping firmware
