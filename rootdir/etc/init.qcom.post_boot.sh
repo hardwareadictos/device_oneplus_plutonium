@@ -127,7 +127,7 @@ echo "0 0 768000 1248000" > /sys/devices/system/cpu/cpu4/core_ctl/hc_correl_lvs
 echo 1 > /sys/devices/system/cpu/cpu4/core_ctl/hc_correl_use_pcost
 # Setting b.L scheduler parameters
 echo 1 > /proc/sys/kernel/sched_migration_fixup
-echo 30 > /proc/sys/kernel/sched_small_task
+echo 15 > /proc/sys/kernel/sched_small_task
 echo 20 > /proc/sys/kernel/sched_mostly_idle_load
 echo 3 > /proc/sys/kernel/sched_mostly_idle_nr_run
 echo 99 > /proc/sys/kernel/sched_upmigrate
