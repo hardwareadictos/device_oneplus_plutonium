@@ -167,6 +167,17 @@ case "$emmc_boot"
 esac
 
 # Post-setup services
+
+# Reset read_ahead value
+for block_device in /sys/block/*
+do
+    echo 512 > $block_device/queue/read_ahead_kb
+done
+
+# Reset I/O scheduler for CFQ
+echo "cfq" > /sys/block/mmcblk0/queue/scheduler
+echo "cfq" > /sys/block/mmcblk0rpmb/queue/scheduler
+
 rm /data/system/perfd/default_values
 setprop ro.min_freq_0 384000
 setprop ro.min_freq_4 384000
