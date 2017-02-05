@@ -207,3 +207,11 @@ use.voice.path.for.pcm.voip=true
 
 #System property for FM transmitter
 ro.fm.transmitter=false
+# Wifi
+persist.data.iwlan.enable=true
+
+# VoLTE
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=0
+persist.dbg.wfc_avail_ovr=0
