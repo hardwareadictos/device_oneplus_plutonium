@@ -276,5 +276,10 @@
         <item>"/system/framework/arm64/boot-core-libart.oat"</item>
         <item>"/system/framework/arm64/boot-QPerformance.oat"</item>
         <item>"/system/framework/arm64/boot-ext.oat"</item>
+        <item>"/system/framework/arm/boot-framework.oat"</item>
+        <item>"/system/framework/arm/boot.oat"</item>
+        <item>"/system/framework/arm/boot-core-libart.oat"</item>
+        <item>"/system/framework/arm/boot-QPerformance.oat"</item>
+        <item>"/system/framework/arm/boot-ext.oat"</item>
    </string-array>
 </resources>
