@@ -115,3 +115,6 @@ TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 USE_SENSOR_MULTI_HAL := true
 
 TARGET_USES_IMS := true
+
+# Gestures
+TARGET_GESTURES_NODE := "/proc/touchpanel/gesture_enable"
