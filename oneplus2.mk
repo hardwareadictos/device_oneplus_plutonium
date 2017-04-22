@@ -34,6 +34,9 @@ PRODUCT_PACKAGES += libGLES_android
 -include $(TOPDIR)hardware/qcom/audio/configs/msm8994/msm8994.mk
 
 PRODUCT_PACKAGES += audiod
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # WLAN driver configuration files
 PRODUCT_COPY_FILES += \
