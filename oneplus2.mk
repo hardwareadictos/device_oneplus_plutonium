@@ -11,29 +11,24 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8994/overlay
+DEVICE_PACKAGE_OVERLAYS := device/oneplus/oneplus2/overlay
 
 TARGET_USES_NQ_NFC := false
 
 # Enable features in video HAL that can compile only on this platform
 TARGET_USES_MEDIA_EXTENSIONS := true
 
-PRODUCT_COPY_FILES += device/qcom/msm8994/media/media_profiles.xml:system/etc/media_profiles.xml \
-                      device/qcom/msm8994/media/media_codecs.xml:system/etc/media_codecs.xml \
-                      device/qcom/msm8994/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
+PRODUCT_COPY_FILES += device/oneplus/oneplus2/media/media_profiles.xml:system/etc/media_profiles.xml \
+                      device/oneplus/oneplus2/media/media_codecs.xml:system/etc/media_codecs.xml \
+                      device/oneplus/oneplus2/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
 
 # Override heap growth limit due to high display density on device
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapgrowthlimit=256m
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-$(call inherit-product, device/qcom/common/common64.mk)
+$(call inherit-product, device/oneplus/oneplus2/common64.mk)
 #msm8996 platform WLAN Chipset
 WLAN_CHIPSET := qca_cld
-
-PRODUCT_NAME := msm8994
-PRODUCT_DEVICE := msm8994
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := MSM8994 for arm64
 
 #Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
@@ -45,14 +40,14 @@ PRODUCT_PACKAGES += audiod
 
 # WLAN driver configuration files
 PRODUCT_COPY_FILES += \
-    device/qcom/msm8994/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/qca_cld/WCNSS_cfg.dat \
-    device/qcom/msm8994/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/qcom/msm8994/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
-    device/qcom/msm8994/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    device/qcom/msm8994/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
-    device/qcom/msm8994/wifi/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
-    device/qcom/msm8994/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
-    device/qcom/msm8994/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny
+    device/oneplus/oneplus2/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/qca_cld/WCNSS_cfg.dat \
+    device/oneplus/oneplus2/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+    device/oneplus/oneplus2/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
+    device/oneplus/oneplus2/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    device/oneplus/oneplus2/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    device/oneplus/oneplus2/wifi/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
+    device/oneplus/oneplus2/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    device/oneplus/oneplus2/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny
 
 # IPA
 PRODUCT_PACKAGES += \
@@ -82,7 +77,7 @@ PRODUCT_PACKAGES += \
 
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
-    device/qcom/msm8994/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf \
+    device/oneplus/oneplus2/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
@@ -95,7 +90,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.relative_humidity.xml:system/etc/permissions/android.hardware.sensor.relative_humidity.xml
 
 PRODUCT_COPY_FILES += \
-    device/qcom/msm8994/sensors/hals.conf:system/etc/sensors/hals.conf
+    device/oneplus/oneplus2/sensors/hals.conf:system/etc/sensors/hals.conf
 
 # MIDI feature
 PRODUCT_COPY_FILES += \
