@@ -1,20 +1,3 @@
-# Board platforms lists to be used for
-# TARGET_BOARD_PLATFORM specific featurization
-QCOM_BOARD_PLATFORMS += msm8994
-QCOM_BOARD_PLATFORMS += msm8992
-
-TARGET_USE_VENDOR_CAMERA_EXT := true
-#ANDROID_COMPILE_WITH_JACK := false
-
-#List of targets that use video hw
-MSM_VIDC_TARGET_LIST := msm8974 msm8610 msm8226 apq8084 msm8916 msm8994 msm8909 msm8992
-
-# Below projects/packages with LOCAL_MODULEs will be used by
-# PRODUCT_PACKAGES to build LOCAL_MODULEs that are tagged with
-# optional tag, which will not be available on target unless
-# explicitly list here. Where project corresponds to the vars here
-# in CAPs.
-
 #ALSA
 ALSA_HARDWARE := alsa.msm8960
 ALSA_HARDWARE += alsa.msm8974
@@ -141,10 +124,6 @@ CONNECTIVITY += services-ext
 CURL := libcurl
 CURL += curl
 
-#CM
-CM := CMFileManager
-#CM += Trebuchet
-
 #Default Launcher
 DELAUN := Launcher3
 
@@ -153,12 +132,6 @@ DASH := libdashplayer
 DASH += libqcmediaplayer
 DASH += qcmediaplayer
 DASH += libextmedia_jni
-
-#EXTENDEDMEDIA_EXT
-EXTENDEDMEDIA_EXT := libextendedmediaextractor
-EXTENDEDMEDIA_EXT += libextendedmediaextractor_jni
-EXTENDEDMEDIA_EXT += extendedmediaextractor
-EXTENDEDMEDIA_EXT += ExtendedMediaPlayer
 
 
 #DATA_OS
@@ -172,9 +145,6 @@ E2FSPROGS := e2fsck
 EBTABLES := ebtables
 EBTABLES += ethertypes
 EBTABLES += libebtc
-
-#FASTPOWERON
-FASTPOWERON := FastBoot
 
 #FM
 FM := qcom.fmradio
@@ -626,53 +596,6 @@ WLAN += pronto_wlan.ko
 #IMS SETTINGS
 IMS_SETTINGS := imssettings
 
-PRODUCT_PACKAGES := \
-    AccountAndSyncSettings \
-    DeskClock \
-    AlarmProvider \
-    Bluetooth \
-    Calculator \
-    Calendar \
-    Camera \
-    CellBroadcastReceiver \
-    CertInstaller \
-    DrmProvider \
-    Email \
-    Gallery2 \
-    LatinIME \
-    Mms \
-    Music \
-    Phone \
-    Provision \
-    Protips \
-    QuickSearchBox \
-    Settings \
-    Sync \
-    SystemUI \
-    Updater \
-    CalendarProvider \
-    SyncProvider \
-    IM \
-    VoiceDialer \
-    FMRadio \
-    FM2 \
-    FMRecord \
-    VideoEditor \
-    SnapdragonGallery \
-    SnapdragonLauncher \
-    SnapdragonMusic
-
-ifneq ($(TARGET_USES_AOSP),true)
-PRODUCT_PACKAGES += \
-       BluetoothExt \
-       BTTestApp \
-       HiddTestApp \
-       a4wpservice \
-       BTLogKit \
-       BTLogSave \
-       wipowerservice
-endif
-
 PRODUCT_PACKAGES += $(ALSA_HARDWARE)
 PRODUCT_PACKAGES += $(ALSA_UCM)
 PRODUCT_PACKAGES += $(ANGLE)
@@ -697,8 +620,6 @@ PRODUCT_PACKAGES += $(DASH)
 PRODUCT_PACKAGES += $(DATA_OS)
 PRODUCT_PACKAGES += $(E2FSPROGS)
 PRODUCT_PACKAGES += $(EBTABLES)
-PRODUCT_PACKAGES += $(EXTENDEDMEDIA_EXT)
-PRODUCT_PACKAGES += $(FASTPOWERON)
 PRODUCT_PACKAGES += $(FM)
 PRODUCT_PACKAGES += $(GPS_HARDWARE)
 PRODUCT_PACKAGES += $(HDMID)
@@ -760,13 +681,6 @@ PRODUCT_PACKAGES += $(IPACM)
 PRODUCT_PACKAGES += $(IMS_SETTINGS)
 PRODUCT_PACKAGES += $(IMS_EXT)
 PRODUCT_PACKAGES += $(CARRIER_ONE_RCS)
-
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-        LiveWallpapers \
-        LiveWallpapersPicker \
-        VisualizationWallpapers \
-        librs_jni
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -854,23 +768,11 @@ endif
 DEVICE_PACKAGE_OVERLAYS += device/qcom/common/device/overlay
 PRODUCT_PACKAGE_OVERLAYS += device/qcom/common/product/overlay
 
-# include additional build utilities
--include device/qcom/common/utils.mk
-
 #Enabling Ring Tones
 #include frameworks/base/data/sounds/OriginalAudio.mk
 
 #Enabling video for live effects
 -include frameworks/base/data/videos/VideoPackage1.mk
 
-# dm-verity definitions
-PRODUCT_SYSTEM_VERITY_PARTITION=/dev/block/bootdevice/by-name/system
-$(call inherit-product, build/target/product/verity.mk)
-
 #skip boot jars check
 SKIP_BOOT_JARS_CHECK := true
-
-ifeq ($(TARGET_BUILD_VARIANT),user)
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES+= \
-    ro.adb.secure=1
-endif
