@@ -52,7 +52,11 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8994/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
     device/qcom/msm8994/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny
 
-
+# IPA
+PRODUCT_PACKAGES += \
+    ipacm \
+    ipacm-diag \
+    IPACM_cfg.xml
 
 #FEATURE_OPENGLES_EXTENSION_PACK support string config file
 PRODUCT_COPY_FILES += \
