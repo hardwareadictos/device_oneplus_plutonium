@@ -41,6 +41,8 @@ PRODUCT_PACKAGES += libGLES_android
 # Audio configuration file
 -include $(TOPDIR)hardware/qcom/audio/configs/msm8994/msm8994.mk
 
+PRODUCT_PACKAGES += audiod
+
 # WLAN driver configuration files
 PRODUCT_COPY_FILES += \
     device/qcom/msm8994/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/qca_cld/WCNSS_cfg.dat \
@@ -98,6 +100,18 @@ PRODUCT_COPY_FILES += \
 # MIDI feature
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
+
+# Fingerprint sensor
+PRODUCT_PACKAGES += fingerprintd
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
+
+# Tools
+PRODUCT_PACKAGES += \
+    libtinyxml \
+    libtinyxml2 \
+    libjson \
+    libprotobuf-cpp-full
 
 #ANT+ stack
 PRODUCT_PACKAGES += \
