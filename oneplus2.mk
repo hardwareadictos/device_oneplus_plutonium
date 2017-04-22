@@ -70,6 +70,11 @@ PRODUCT_PACKAGES += \
     sap.conf \
     xtwifi.conf
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    device/oneplus/oneplus2/keylayout/fpc1020.kl:system/usr/keylayout/fpc1020.kl \
+    device/oneplus/oneplus2/keylayout/synaptics.kl:system/usr/keylayout/synaptics.kl
+
 #FEATURE_OPENGLES_EXTENSION_PACK support string config file
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml
