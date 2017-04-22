@@ -13,11 +13,7 @@
 # limitations under the License.
 DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8994/overlay
 
-ifneq ($(TARGET_USES_AOSP),true)
 TARGET_USES_NQ_NFC := false
-TARGET_USES_QCOM_BSP := true
-endif
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 # Enable features in video HAL that can compile only on this platform
 TARGET_USES_MEDIA_EXTENSIONS := true
@@ -28,8 +24,6 @@ PRODUCT_COPY_FILES += device/qcom/msm8994/media_profiles.xml:system/etc/media_pr
                       device/qcom/msm8994/media_codecs.xml:system/etc/media_codecs.xml \
                       device/qcom/msm8994/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
 endif  #TARGET_ENABLE_QC_AV_ENHANCEMENTS
-
-PRODUCT_COPY_FILES += device/qcom/msm8994/whitelistedapps.xml:system/etc/whitelistedapps.xml
 
 # Override heap growth limit due to high display density on device
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -87,11 +81,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf \
     p2p_supplicant_overlay.conf
 
-
-ifneq ($(WLAN_CHIPSET),)
-PRODUCT_PACKAGES += $(WLAN_CHIPSET)_wlan.ko
-endif
-
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
     device/qcom/msm8994/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf \
@@ -104,7 +93,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:system/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:system/etc/permissions/android.hardware.sensor.stepdetector.xml \
     frameworks/native/data/etc/android.hardware.sensor.ambient_temperature.xml:system/etc/permissions/android.hardware.sensor.ambient_temperature.xml \
-    frameworks/native/data/etc/android.hardware.sensor.relative_humidity.xml:system/etc/permissions/android.hardware.sensor.relative_humidity.xml \
+    frameworks/native/data/etc/android.hardware.sensor.relative_humidity.xml:system/etc/permissions/android.hardware.sensor.relative_humidity.xml
 
 PRODUCT_COPY_FILES += \
     device/qcom/msm8994/sensors/hals.conf:system/etc/sensors/hals.conf
