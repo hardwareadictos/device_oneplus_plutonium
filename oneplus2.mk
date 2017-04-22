@@ -49,6 +49,10 @@ PRODUCT_COPY_FILES += \
     device/oneplus/oneplus2/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
     device/oneplus/oneplus2/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny
 
+# Lights
+PRODUCT_PACKAGES += \
+    lights.msm8994
+
 # IPA
 PRODUCT_PACKAGES += \
     ipacm \
