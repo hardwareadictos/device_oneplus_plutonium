@@ -18,12 +18,9 @@ TARGET_USES_NQ_NFC := false
 # Enable features in video HAL that can compile only on this platform
 TARGET_USES_MEDIA_EXTENSIONS := true
 
-# copy customized media_profiles and media_codecs xmls for 8994
-ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
 PRODUCT_COPY_FILES += device/qcom/msm8994/media_profiles.xml:system/etc/media_profiles.xml \
                       device/qcom/msm8994/media_codecs.xml:system/etc/media_codecs.xml \
                       device/qcom/msm8994/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
-endif  #TARGET_ENABLE_QC_AV_ENHANCEMENTS
 
 # Override heap growth limit due to high display density on device
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -37,28 +34,6 @@ PRODUCT_NAME := msm8994
 PRODUCT_DEVICE := msm8994
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := MSM8994 for arm64
-
-PRODUCT_BOOT_JARS += tcmiface
-# This jar is needed for MSIM manual provisioning and for other
-# telephony related functionalities to work.
-PRODUCT_BOOT_JARS += telephony-ext
-
-PRODUCT_PACKAGES += telephony-ext
-
-
-ifneq ($(strip $(QCPATH)),)
-PRODUCT_BOOT_JARS += qcom.fmradio
-PRODUCT_BOOT_JARS += WfdCommon
-#PRODUCT_BOOT_JARS += extendedmediaextractor
-#PRODUCT_BOOT_JARS += security-bridge
-#PRODUCT_BOOT_JARS += qsb-port
-PRODUCT_BOOT_JARS += oem-services
-#PRODUCT_BOOT_JARS += com.qti.dpmframework
-#PRODUCT_BOOT_JARS += dpmapi
-#PRODUCT_BOOT_JARS += com.qti.location.sdk
-endif
-
-#PRODUCT_BOOT_JARS += qcmediaplayer
 
 #Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
@@ -108,15 +83,7 @@ PRODUCT_PACKAGES += \
     libantradio \
     antradio_app
 
-PRODUCT_SUPPORTS_VERITY := true
-PRODUCT_SYSTEM_VERITY_PARTITION :=  /dev/block/bootdevice/by-name/system
 PRODUCT_AAPT_CONFIG += xlarge large
-
-#QTIC flag
--include $(QCPATH)/common/config/qtic-config.mk
-
-PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res \
-        $(PRODUCT_PACKAGE_OVERLAYS)
 
 #for android_filesystem_config.h
 PRODUCT_PACKAGES += \
