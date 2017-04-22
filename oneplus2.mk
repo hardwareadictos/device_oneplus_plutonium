@@ -116,3 +116,6 @@ PRODUCT_AAPT_CONFIG += xlarge large
 #for android_filesystem_config.h
 PRODUCT_PACKAGES += \
     fs_config_files
+
+# Call the proprietary setup
+$(call inherit-product, vendor/oneplus/oneplus2/oneplus2-vendor.mk)
