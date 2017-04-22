@@ -58,6 +58,17 @@ PRODUCT_PACKAGES += \
     ipacm-diag \
     IPACM_cfg.xml
 
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8994 \
+    flp.conf \
+    gps.conf \
+    izat.conf \
+    lowi.conf \
+    quipc.conf \
+    sap.conf \
+    xtwifi.conf
+
 #FEATURE_OPENGLES_EXTENSION_PACK support string config file
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml
