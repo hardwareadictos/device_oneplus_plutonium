@@ -132,6 +132,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_AAPT_CONFIG += xlarge large
 
+# No sdcard
+PRODUCT_CHARACTERISTICS := nosdcard
+
 #for android_filesystem_config.h
 PRODUCT_PACKAGES += \
     fs_config_files
