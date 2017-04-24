@@ -199,6 +199,9 @@ on init
     chmod 0666 /dev/drv2605
     chown system system /dev/drv2605
 
+    # Camera hack
+    setprop persist.camera.HAL3.enabled 0
+
 
 on fs
 #    wait /dev/block/bootdevice

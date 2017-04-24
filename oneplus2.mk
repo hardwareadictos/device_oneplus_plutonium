@@ -70,6 +70,13 @@ PRODUCT_PACKAGES += \
     sap.conf \
     xtwifi.conf
 
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8994 \
+    libshim_camera \
+    libshim_ims-camera \
+    sensors.hal.tof
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     device/oneplus/oneplus2/keylayout/fpc1020.kl:system/usr/keylayout/fpc1020.kl \
