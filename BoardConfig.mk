@@ -118,6 +118,8 @@ TARGET_PER_MGR_ENABLED := true
 
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 
+BOARD_SEPOLICY_DIRS += device/oneplus/oneplus2/sepolicy
+
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true
 
