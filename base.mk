@@ -519,8 +519,7 @@ RF4CE := RemoTI_RNP.cfg
 RF4CE += rf4ce
 
 #SENSORS_HARDWARE
-SENSORS_HARDWARE := sensors.msm7630_surf
-SENSORS_HARDWARE += sensors.msm7630_fusion
+SENSORS_HARDWARE := sensors.msm8994
 
 #SOFTAP
 SOFTAP := libQWiFiSoftApCfg
