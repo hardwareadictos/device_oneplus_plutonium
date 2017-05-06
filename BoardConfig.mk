@@ -113,6 +113,10 @@ PROTOBUF_SUPPORTED := true
 #Enable HW based full disk encryption
 TARGET_HW_DISK_ENCRYPTION := false
 
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_msm
+TARGET_LIBINIT_DEFINES_FILE := device/oneplus/oneplus2/init/init_oneplus2.cpp
+
 #Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
