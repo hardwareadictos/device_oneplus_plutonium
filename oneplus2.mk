@@ -51,7 +51,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msm8994
+    lights.qcom
 
 # IPA
 PRODUCT_PACKAGES += \
