@@ -198,8 +198,8 @@ dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heapminfree=512k
 dalvik.vm.heapmaxfree=8m
 
-# enable navigation bar
-qemu.hw.mainkeys=0
+# Disable navigation bar
+qemu.hw.mainkeys=1
 
 #enable voice path for PCM VoIP by default
 use.voice.path.for.pcm.voip=true
