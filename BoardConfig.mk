@@ -28,6 +28,8 @@ TARGET_NO_KERNEL := false
 TARGET_KERNEL_APPEND_DTB := true
 -include $(QCPATH)/common/oneplus2/BoardConfigVendor.mk
 
+TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2
+
 # Some framework code requires this to enable BT
 BOARD_HAVE_BLUETOOTH := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oneplus/oneplus2
