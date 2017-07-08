@@ -86,6 +86,8 @@ on init
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_val
 
     # Touchscreen
+    chown root system /proc/touchpanel/gesture_enable
+    chmod 0660 /proc/touchpanel/gesture_enable
     chown root system /proc/touchpanel/double_swipe
     chmod 0660 /proc/touchpanel/double_swipe
     chown root system /proc/touchpanel/double_tap
