@@ -110,7 +110,8 @@ on init
     chmod 0660 /proc/touchpanel/right_swipe
     chown root system /proc/touchpanel/up_swipe
     chmod 0660 /proc/touchpanel/up_swipe
-
+    write /proc/touchpanel/double_tap_enable 1
+    
     # Buttons
     chown root system /proc/s1302/key_rep
     chmod 0660 /proc/s1302/key_rep
