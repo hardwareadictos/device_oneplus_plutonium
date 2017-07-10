@@ -32,6 +32,10 @@ TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2
 
 # Some framework code requires this to enable BT
 BOARD_HAVE_BLUETOOTH := true
+BOARD_HAS_QCA_BT_ROME := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
+QCOM_BT_USE_BTNV := true
+QCOM_BT_USE_SMD_TTY := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oneplus/oneplus2
 
 # GPS
