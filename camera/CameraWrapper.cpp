@@ -124,7 +124,7 @@ static int camera_device_open(const hw_module_t *module __unused, const char *na
         return -EINVAL;
     }
 
-    for (cameraretry = 0; cameraretry < 2; cameraretry++) {
+    for (cameraretry = 0; cameraretry < 5; cameraretry++) {
          rv = gVendorModule->common.methods->open(
                  (const hw_module_t*)gVendorModule, name,
                  device);
