@@ -1,0 +1,17 @@
+[
+  { 
+    "repository": "CertifiedBlyndGuy/Nightshade-Plutonium",
+    "target_path": "kernel/oneplus/msm8994",
+    "branch": "Eden"
+  },
+  { 
+    "repository": "CertifiedBlyndGuy/vendor_oneplus",
+    "target_path": "vendor/oneplus",
+    "branch": "Eden"
+  },
+  {
+    "repository": "CandyDevices/device_oppo_common",
+    "target_path": "device/oppo/common",
+    "branch": "c7.1.2"
+  }
+]
