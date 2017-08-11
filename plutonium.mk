@@ -11,18 +11,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-DEVICE_PACKAGE_OVERLAYS := device/oneplus/oneplus2/overlay
+DEVICE_PACKAGE_OVERLAYS := device/oneplus/plutonium/overlay
 
 TARGET_USES_NQ_NFC := false
 
 # Enable features in video HAL that can compile only on this platform
 TARGET_USES_MEDIA_EXTENSIONS := true
 
-PRODUCT_COPY_FILES += device/oneplus/oneplus2/media/media_profiles.xml:system/etc/media_profiles.xml \
-                      device/oneplus/oneplus2/media/media_codecs.xml:system/etc/media_codecs.xml \
-                      device/oneplus/oneplus2/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
+PRODUCT_COPY_FILES += device/oneplus/plutonium/media/media_profiles.xml:system/etc/media_profiles.xml \
+                      device/oneplus/plutonium/media/media_codecs.xml:system/etc/media_codecs.xml \
+                      device/oneplus/plutonium/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
 
-$(call inherit-product, device/oneplus/oneplus2/common64.mk)
+$(call inherit-product, device/oneplus/plutonium/common64.mk)
 
 #msm8996 platform WLAN Chipset
 WLAN_CHIPSET := qca_cld
@@ -40,14 +40,14 @@ PRODUCT_COPY_FILES += \
 
 # WLAN driver configuration files
 PRODUCT_COPY_FILES += \
-    device/oneplus/oneplus2/wifi/WCNSS_cfg.dat:system/etc/wifi/WCNSS_cfg.dat \
-    device/oneplus/oneplus2/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/oneplus/oneplus2/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
-    device/oneplus/oneplus2/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    device/oneplus/oneplus2/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
-    device/oneplus/oneplus2/wifi/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
-    device/oneplus/oneplus2/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
-    device/oneplus/oneplus2/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny
+    device/oneplus/plutonium/wifi/WCNSS_cfg.dat:system/etc/wifi/WCNSS_cfg.dat \
+    device/oneplus/plutonium/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+    device/oneplus/plutonium/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
+    device/oneplus/plutonium/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    device/oneplus/plutonium/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    device/oneplus/plutonium/wifi/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
+    device/oneplus/plutonium/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    device/oneplus/plutonium/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -80,8 +80,8 @@ PRODUCT_PACKAGES += \
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    device/oneplus/oneplus2/keylayout/fpc1020.kl:system/usr/keylayout/fpc1020.kl \
-    device/oneplus/oneplus2/keylayout/synaptics.kl:system/usr/keylayout/synaptics.kl
+    device/oneplus/plutonium/keylayout/fpc1020.kl:system/usr/keylayout/fpc1020.kl \
+    device/oneplus/plutonium/keylayout/synaptics.kl:system/usr/keylayout/synaptics.kl
 
 #FEATURE_OPENGLES_EXTENSION_PACK support string config file
 PRODUCT_COPY_FILES += \
@@ -94,7 +94,7 @@ PRODUCT_PACKAGES += \
 
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
-    device/oneplus/oneplus2/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf \
+    device/oneplus/plutonium/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
@@ -107,7 +107,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.relative_humidity.xml:system/etc/permissions/android.hardware.sensor.relative_humidity.xml
 
 PRODUCT_COPY_FILES += \
-    device/oneplus/oneplus2/sensors/hals.conf:system/etc/sensors/hals.conf
+    device/oneplus/plutonium/sensors/hals.conf:system/etc/sensors/hals.conf
 
 # MIDI feature
 PRODUCT_COPY_FILES += \
@@ -144,9 +144,9 @@ PRODUCT_PACKAGES += \
     fs_config_files
 
 # Call the proprietary setup
-$(call inherit-product, vendor/oneplus/oneplus2/oneplus2-vendor.mk)
+$(call inherit-product, vendor/oneplus/plutonium/plutonium-vendor.mk)
 
-PRODUCT_NAME := candy_oneplus2
+PRODUCT_NAME := candy_plutonium
 PRODUCT_DEVICE := oneplus2
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus

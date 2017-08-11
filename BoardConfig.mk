@@ -26,9 +26,9 @@ BOOTLOADER_GCC_VERSION := arm-eabi-4.8
 BOOTLOADER_PLATFORM := msm8994
 TARGET_NO_KERNEL := false
 TARGET_KERNEL_APPEND_DTB := true
--include $(QCPATH)/common/oneplus2/BoardConfigVendor.mk
+-include $(QCPATH)/common/plutonium/BoardConfigVendor.mk
 
-TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2
+TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2,plutonium
 
 # Some framework code requires this to enable BT
 BOARD_HAVE_BLUETOOTH := true
@@ -36,7 +36,7 @@ BOARD_HAS_QCA_BT_ROME := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 QCOM_BT_USE_BTNV := true
 QCOM_BT_USE_SMD_TTY := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oneplus/oneplus2
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oneplus/plutonium
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
@@ -88,7 +88,7 @@ AUDIO_FEATURE_ENABLED_FLAC_OFFLOAD := true
 BOARD_USES_GENERIC_AUDIO := true
 
 # Releasetools extension for shipping firmware
-TARGET_RELEASETOOLS_EXTENSIONS := device/oneplus/oneplus2
+TARGET_RELEASETOOLS_EXTENSIONS := device/oneplus/plutonium
 
 TARGET_NO_RPC := true
 
@@ -99,7 +99,7 @@ TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Include path
-TARGET_SPECIFIC_HEADER_PATH := device/oneplus/oneplus2/include
+TARGET_SPECIFIC_HEADER_PATH := device/oneplus/plutonium/include
 
 # Camera
 TARGET_ALLOW_TEXT_RELOCATIONS := true
@@ -119,7 +119,7 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
-TARGET_RECOVERY_FSTAB := device/oneplus/oneplus2/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/oneplus/plutonium/rootdir/etc/fstab.qcom
 
 # Force camera module to be compiled only in 32-bit mode on 64-bit systems
 # Once camera module can run in the native mode of the system (either
@@ -134,14 +134,14 @@ TARGET_HW_DISK_ENCRYPTION := false
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := device/oneplus/oneplus2/init/init_oneplus2.cpp
+TARGET_LIBINIT_DEFINES_FILE := device/oneplus/plutonium/init/init_plutonium.cpp
 
 #Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 
-BOARD_SEPOLICY_DIRS += device/oneplus/oneplus2/sepolicy
+BOARD_SEPOLICY_DIRS += device/oneplus/plutonium/sepolicy
 
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true

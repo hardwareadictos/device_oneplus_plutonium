@@ -17,7 +17,7 @@
 
 set -e
 
-DEVICE=oneplus2
+DEVICE=plutonium
 VENDOR=oneplus
 
 # Load extractutils and do some sanity checks

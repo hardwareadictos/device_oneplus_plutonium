@@ -1,4 +1,4 @@
-$(call inherit-product, device/oneplus/oneplus2/base.mk)
+$(call inherit-product, device/oneplus/plutonium/base.mk)
 
 # For PRODUCT_COPY_FILES, the first instance takes precedence.
 # Since we want use QC specific files, we should inherit

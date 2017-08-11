@@ -52,6 +52,6 @@ $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
 
-include device/oneplus/oneplus2/tftp.mk
+include device/oneplus/plutonium/tftp.mk
 
 endif

@@ -17,7 +17,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 # Set the firmware path in the environment
-target_firmware_path := $(ANDROID_BUILD_TOP)/vendor/oneplus/oneplus2/firmware_images/
+target_firmware_path := $(ANDROID_BUILD_TOP)/vendor/oneplus/plutonium/firmware_images/
 
 # Setup shipping the bootloader
 TARGET_BOOTLOADER_EMMC_INTERNAL := $(target_firmware_path)/emmc_appsboot.mbn
