@@ -5,6 +5,9 @@ $(call inherit-product, device/oneplus/plutonium/base.mk)
 # device-vendor.mk first to make sure QC specific files gets installed.
 $(call inherit-product-if-exists, $(QCPATH)/common/config/device-vendor.mk)
 
+# Inherit from oppo-common
+$(call inherit-product, device/oppo/common/common.mk)
+
 PRODUCT_AAPT_CONFIG += hdpi mdpi
 
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -3,6 +3,9 @@
 # Product-specific compile-time definitions.
 #
 
+# Inherit from oppo-common
+-include device/oppo/common/BoardConfigCommon.mk
+
 TARGET_BOARD_PLATFORM := msm8994
 TARGET_BOOTLOADER_BOARD_NAME := msm8994
 
